@@ -73,6 +73,8 @@ See 'snap info docker' for additional versions.
 
 ## Решение 3
 
+![img4](img/img4.jpg)
+
 ## Задача 4
 1. Запустите в Yandex Cloud ВМ (вам хватит 2 Гб Ram).
 2. Подключитесь к Вм по ssh и установите docker.
@@ -83,14 +85,24 @@ See 'snap info docker' for additional versions.
 
 ## Решение 4
 
+![img5](img/img5.jpg)
+
+![img6](img/img6.jpg)
+
+https://github.com/ViktorLebedev93/shvirtd-example-python
+
 ## Задача 6
 Скачайте docker образ ```hashicorp/terraform:latest``` и скопируйте бинарный файл ```/bin/terraform``` на свою локальную машину, используя dive и docker save.
 Предоставьте скриншоты  действий .
 
 ## Решение 6
 
+...
+
 ## Задача 6.1
 Добейтесь аналогичного результата, используя docker cp.  
 Предоставьте скриншоты  действий .
 
 ## Решение 6.1
+
+...
