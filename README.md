@@ -27,6 +27,8 @@ See 'snap info docker' for additional versions.
 
 ## Решение 0
 
+![img1](img/img1.jpg)
+
 ###  **Своё решение к задачам оформите в вашем GitHub репозитории!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**
 
 ---
