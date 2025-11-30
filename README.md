@@ -80,7 +80,6 @@ See 'snap info docker' for additional versions.
 2. Подключитесь к Вм по ssh и установите docker.
 3. Напишите bash-скрипт, который скачает ваш fork-репозиторий в каталог /opt и запустит проект целиком.
 4. Зайдите на сайт проверки http подключений, например(или аналогичный): ```https://check-host.net/check-http``` и запустите проверку вашего сервиса ```http://<внешний_IP-адрес_вашей_ВМ>:8090```. Таким образом трафик будет направлен в ingress-proxy. Трафик должен пройти через цепочки: Пользователь → Internet → Nginx → HAProxy → FastAPI(запись в БД) → HAProxy → Nginx → Internet → Пользователь
-5. (Необязательная часть) Дополнительно настройте remote ssh context к вашему серверу. Отобразите список контекстов и результат удаленного выполнения ```docker ps -a```
 6. Повторите SQL-запрос на сервере и приложите скриншот и ссылку на fork.
 
 ## Решение 4
@@ -97,12 +96,22 @@ https://github.com/ViktorLebedev93/shvirtd-example-python
 
 ## Решение 6
 
-...
+Устанавливаем Dive и командой docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest hashicorp/terraform просматриваем слои контенйера через Dive
+ищем нужный слой, где появляется файлик .terraform бинарник
+
+![img7](img/img7.jpg)
+
+командой docker save hashicorp/terraform -o image.tar извлекаем к себе на машину все слои образа
+И через tar разархивируем данные из нужного нам слоя
+
+![img8](img/img8.jpg)
 
 ## Задача 6.1
 Добейтесь аналогичного результата, используя docker cp.  
 Предоставьте скриншоты  действий .
 
 ## Решение 6.1
+
+![img9](img/img9.jpg)
 
 ...
